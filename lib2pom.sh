@@ -15,6 +15,11 @@ fi
 DIRECTORY=$1
 APIURL="https://search.maven.org/solrsearch/select?q=!artifact!&rows=1&wt=json"
 
+if [ ! -d $DIRECTORY ]; then
+	printf "${RED} The directory $DIRECTORY does not exist."
+	exit 1
+fi
+
 urlencode() {
   local LC_ALL=C
   local string="$*"
