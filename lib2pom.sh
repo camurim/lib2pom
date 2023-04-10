@@ -8,7 +8,7 @@ BOLDRED='\033[1;31m'
 NC='\033[0m'
 
 if [ $# -lt 1 ]; then
-	printf "${RED}Syntax: $(basename $0) <MESAGE>${NC}\n\n" 1>&2
+	printf "${RED}Syntax: $(basename $0) <LIB_FOLDER>${NC}\n\n" 1>&2
     exit 1
 fi
 
