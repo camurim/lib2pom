@@ -13,7 +13,7 @@ if [ $# -lt 1 ]; then
 fi
 
 DIRECTORY=$1
-APIURL="https://search.maven.org/solrsearch/select?q=!artifact!&rows=5&wt=json"
+APIURL="https://search.maven.org/solrsearch/select?q=!artifact!&rows=1&wt=json"
 
 urlencode() {
   local LC_ALL=C
