@@ -2,13 +2,10 @@
 
 # Cores
 RED='\033[0;31m'
-BLUE='\033[0;34m'
-GREEN='\033[0;32m'
-BOLDRED='\033[1;31m'
 NC='\033[0m'
 
 if [ $# -lt 1 ]; then
-	printf "${RED}Syntax: $(basename $0) <LIB_FOLDER>${NC}\n\n" 1>&2
+	echo -e "${RED}Syntax: $(basename $0) <LIB_FOLDER>${NC}\n\n" 1>&2
     exit 1
 fi
 
@@ -55,7 +52,7 @@ file2dependency() {
         echo "<!-- OK: $filename -->"
     fi
 
-    echo -e "<dependency>\n\t<groupId>$group</groupId>\n\t<artifactId>$artifact</artifact>\n\t<version>$version</version>\n</dependency>"
+    echo -e "<dependency>\n\t<groupId>$group</groupId>\n\t<artifactId>$artifact</artifactId>\n\t<version>$version</version>\n</dependency>"
 }
 
 for f in ${DIRECTORY}/*.jar; do
